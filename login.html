@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('lily login.jpg'); /* Ganti dengan URL gambar latar belakang Anda */
+            background-size: cover('lily login.jpg'); /* Mengatur gambar agar menutupi seluruh latar belakang */
+            background-position: center; /* Memusatkan gambar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white; /* Mengubah warna teks menjadi putih untuk kontras */
+        }
+        .login-container {
+            background: rgba(0, 0, 0, 0.7); /* Latar belakang transparan untuk kontainer */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #ddd; /* Warna teks footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="index.html" method="chrome">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2023 Aplikasi Perpustakaan</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form default
+
+            // Mengambil nilai username dan password
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Logika untuk memproses login (misalnya, validasi)
+            // Di sini Anda bisa menambahkan logika untuk memeriksa kredensial
+            if (username === "admin" && password === "password") {
+                alert("Loginq"; // Ganti dengan halaman yang sesuai
+            } else {
+                alert("Username atau password salah!");
+            }
+        });
+    </script>
+</body>
+</html>

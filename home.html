@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>Halamn Utama</title>
+    </head>
+    <body>
+        <font color="blue"><h1>Pemrograman WEB dengan HTML</h1></font>
+        <font color="brown"><h2><blink>Sistem informasi</blink></h2></font>
+        <hr size=3 color="blue">
+        <font size=6 color="magenta"
+        <marquee behavior="scroll" direction="up" height=40 scrollamount="1">Selamat datang pada halaman website kami....</marquee></font><br>
+        <p align="justify"><font size=5>Teriima kasih anda telah bergabung dan berkunjung
+        pada situs kami, kami berharap anda memperoleh informasi yang anda inginkan dan 
+        anda cari.</p>
+        </p>situs ini berisi informasi sekitar materi yang berhubungan dengan programmung 
+        WEB, diantaranya : HTML, CSS, PHP, MYSQL dan materi atau artikel lain sekitar web.</p></font>
+    </body>     
+    </html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Layout CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        main {
+            flex: 2;
+            padding: 15px;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            aside {
+                order: -1; /* Menempatkan sidebar di atas konten utama pada layar kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Judul Halaman</h1>
+    </header>
+    <div class="container">
+        <main>
+            <h2>Konten Utama</h2>
+            <p>Ini adalah konten utama halaman. Anda dapat menambahkan teks, gambar, dan elemen lainnya di sini.</p>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Ini adalah sidebar yang berisi informasi tambahan atau tautan.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>Hak Cipta &copy; 2024</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Halaman Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        main {
+            flex: 2;
+            background: white;
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        aside {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            main {
+                margin-right: 0; /* Menghapus margin kanan pada layar kecil */
+                margin-bottom: 20px; /* Menambahkan margin bawah untuk jarak */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Halaman Web</h1>
+    </header>
+    <div class="container">
+        <main>
+            <h2>Konten Utama</h2>
+            <p>Ini adalah konten utama halaman. Anda dapat menambahkan teks, gambar, dan elemen lainnya di sini.</p>
+            <p>Pengembangan web adalah proses yang menarik dan penuh tantangan.</p>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Ini adalah sidebar yang berisi informasi tambahan atau tautan.</p>
+            <ul>
+                <li><a href="gallery.html">Tautan 1</a></li>
+                <li><a href="kontak.html">Tautan 2</a></li>
+                <li><a href="lily4.webp">Tautan 3</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>Hak Cipta &copy; 2024</p>
+    </footer>
+</body>
+</html>

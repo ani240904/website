@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Transaksi</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #4CAF50; color: white; padding: 10px; text-align: center; }
+        nav { margin: 10px; }
+        nav a { margin: 10px; text-decoration: none; color: #4CAF50; }
+        main { padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        footer { text-align: center; padding: 10px; background: #f1f1f1; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Halaman Transaksi</h1>
+    </header>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#transaksi">Transaksi</a>
+        <a href="#riwayat">Riwayat Transaksi</a>
+    </nav>
+    <main>
+        <h2>Form Transaksi</h2>
+        <form id="transaksiForm">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+            <label for="jenis">Jenis Transaksi:</label><br>
+            <select id="jenis" name="jenis" required>
+                <option value="pinjam">Pinjam</option>
+                <option value="beli">Beli</option>
+                <option value="simpanan">Simpanan</option>
+            </select><br><br>
+            <label for="jumlah">Jumlah:</label><br>
+            <input type="number" id="jumlah" name="jumlah" required><br><br>
+            <button type="submit">Proses Transaksi</button>
+        </form>
+
+        <h2>Daftar Transaksi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Jenis Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
+                </tr>
+            </thead>
+            <tbody id="daftarTransaksi">
+                <!-- Daftar transaksi akan ditambahkan di sini -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2023 Aplikasi Transaksi</p>
+    </footer>
+
+    <script>
+        document.getElementById('transaksiForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form dari pengiriman default
+
+            // Mengambil data dari form
+            const nama = document.getElementById('nama').value;
+            const jenis = document.getElementById('jenis').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const tanggal = new Date().toLocaleDateString();
+
+            // Menambahkan transaksi ke tabel
+            const table = document.getElementById('daftarTransaksi');
+            const row = table.insertRow();
+            row.insertCell(0).innerText = nama;
+            row.insertCell(1).innerText = jenis;
+            row.insertCell(2).innerText = jumlah;
+            row.insertCell(3).innerText = tanggal;
+
+            // Mengosongkan form setelah transaksi ditambahkan
+            document.getElementById('transaksiForm').reset();
+        });
+    </script>
+</body>
+</html>
